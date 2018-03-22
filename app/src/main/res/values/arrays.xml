@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- These are the options displayed in the condition drop-down Spinner -->
+    <string-array name="array_condition">
+        <item>@string/condition_unknown</item>
+        <item>@string/condition_new</item>
+        <item>@string/condition_used</item>
+    </string-array>
+</resources>

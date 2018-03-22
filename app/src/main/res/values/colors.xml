@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The app branding color for the app bar -->
+    <color name="colorPrimary">#673AB7</color>
+
+    <!-- Darker variant for the status bar and contextual app bars -->
+    <color name="colorPrimaryDark">#512DA8</color>
+
+    <!-- Accent color for UI controls like checkboxes and text fields -->
+    <color name="colorAccent">#3F51B5</color>
+
+    <!--Primary text color-->
+    <color name="primaryTextColor">#394450</color>
+
+    <!--Secondary text color-->
+    <color name="secondaryTextColor">#757575</color>
+
+    <!--Color for the price of each item in the list-->
+    <color name="listPriceColor">#0a7a00</color>
+
+    <!-- Primary color for the editor -->
+    <color name="editorColorPrimary">#76D676</color>
+
+    <!-- Primary dark color for the editor -->
+    <color name="editorColorPrimaryDark">#4CAF50</color>
+
+    <!-- Color for add button -->
+    <color name="addButtonColor">#76D676</color>
+
+    <!-- Color for cancel button -->
+    <color name="minusButtonColor">#F0514B</color>
+</resources>

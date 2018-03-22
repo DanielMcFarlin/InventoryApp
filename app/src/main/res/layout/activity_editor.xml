@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Layout for the editor -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    tools:context=".EditorActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Whole Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Product Info Label -->
+                <TextView
+                    style="@style/LabelStyle"
+                    android:text="@string/name" />
+
+                <!-- Product Info Inputs -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:paddingLeft="4dp">
+
+                    <!-- Product Name Input -->
+                    <EditText
+                        android:id="@+id/name_edit"
+                        style="@style/UserHintStyle"
+                        android:hint="@string/hint_product_name"
+                        android:inputType="text" />
+
+                    <!-- Model Input -->
+                    <EditText
+                        android:id="@+id/model_edit"
+                        style="@style/UserHintStyle"
+                        android:hint="@string/model_number_hint"
+                        android:inputType="textCapWords" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="4dp">
+
+                        <!-- Price Input -->
+                        <EditText
+                            android:id="@+id/price_edit"
+                            style="@style/UserHintStyle"
+                            android:hint="@string/price_hint_editor_activity"
+                            android:inputType="numberDecimal" />
+
+                        <!-- Currency Type Input -->
+                        <TextView
+                            android:id="@+id/currency_symbol"
+                            style="@style/EditorUnitsStyle"
+                            android:text="@string/currency_symbol" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Condition category -->
+            <LinearLayout
+                android:id="@+id/container_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Condition Label -->
+                <TextView
+                    style="@style/LabelStyle"
+                    android:text="@string/product_condition" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <!-- Condition drop-down spinner -->
+                    <Spinner
+                        android:id="@+id/condition_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:paddingRight="16dp"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Supplier Category -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Supplier Label -->
+                <TextView
+                    style="@style/LabelStyle"
+                    android:text="@string/supplier" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <!-- Supplier Name Input -->
+                    <EditText
+                        android:id="@+id/supplier_name_edit"
+                        style="@style/UserHintStyle"
+                        android:hint="@string/hint_supplier_name"
+                        android:inputType="textCapWords" />
+
+                    <!-- Supplier E-mail Input -->
+                    <EditText
+                        android:id="@+id/supplier_email_edit"
+                        style="@style/UserHintStyle"
+                        android:hint="@string/hint_email_supplier"
+                        android:inputType="textEmailAddress" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Image Category -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Photo Label -->
+                <TextView
+                    style="@style/LabelStyle"
+                    android:layout_gravity="center"
+                    android:text="@string/product_photo" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <!-- Photo Input -->
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="125dp"
+                        android:maxHeight="125dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="20dp"
+                        android:scaleType="centerInside"
+                        tools:minHeight="125dp" />
+
+                    <!-- Photo Hint -->
+                    <TextView
+                        android:id="@+id/add_or_edit_image_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textStyle="italic"
+                        tools:text="@string/add_image_hint" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Quantity Category -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/container_quanitity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <!-- Quantity Label -->
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:text="@string/category_quantity" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp">
+
+                        <!-- Quantity Input -->
+                        <EditText
+                            android:id="@+id/quantity_edit"
+                            style="@style/UserHintStyle"
+                            android:hint="@string/hint_product_quantity"
+                            android:inputType="number" />
+
+                        <!-- Units Text -->
+                        <TextView
+                            android:id="@+id/label_amount_units"
+                            style="@style/EditorUnitsStyle"
+                            android:text="@string/unit_product_quantity" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/plusButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/addButtonColor"
+                    android:text="+1"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/minusButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/minusButtonColor"
+                    android:text="-1"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
